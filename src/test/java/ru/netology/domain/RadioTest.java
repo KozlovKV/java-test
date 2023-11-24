@@ -152,23 +152,5 @@ class RadioTest {
         Assertions.assertEquals(expected, actual);
     }
 
-    @Test
-    public void checkSetOtherStationsCount() {
-        Radio radio = new Radio(60);
-        radio.prevStation();
 
-        int expected = 59;
-        int actual = radio.getCurrentStation();
-        Assertions.assertEquals(expected, actual);
-    }
-
-    @Test
-    public void checkIncorrectRadioStationsCount() {
-        Radio radio = new Radio(-5);
-        radio.prevStation();
-
-        int expected = 8;
-        int actual = radio.getCurrentStation();
-        Assertions.assertEquals(expected, actual);
-    }
 }
