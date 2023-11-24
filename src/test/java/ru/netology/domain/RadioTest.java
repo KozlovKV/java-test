@@ -171,7 +171,7 @@ class RadioTest {
     }
 
     @Test
-    public void checkNextStationWithOtherStationsCount() {
+    public void checkNextStationMoreDefaultMaxWithOtherStationsCount() {
         Radio radio = new Radio(60);
         radio.setCurrentStation(9);
         radio.nextStation();
@@ -182,8 +182,9 @@ class RadioTest {
     }
 
     @Test
-    public void checkPrevStationWithOtherStationsCount() {
+    public void checkPrevStationLessMinWithOtherStationsCount() {
         Radio radio = new Radio(60);
+        radio.setCurrentStation(0);
         radio.prevStation();
 
         int expected = 59;
