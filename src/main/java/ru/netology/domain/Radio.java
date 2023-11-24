@@ -5,6 +5,7 @@ public class Radio {
     private int currentVolume = 0;
     private int maxVolume = 100;
     private int minVolume = 0;
+    private int radioStationsCount = 10;
     private int maxRadioStation = 9;
     private int minRadioStation = 0;
 
@@ -12,6 +13,7 @@ public class Radio {
 
     public Radio(int radioStationsCount) {
         if (radioStationsCount > 0) {
+            this.radioStationsCount = radioStationsCount;
             this.maxRadioStation = radioStationsCount - 1;
         }
     }
@@ -42,6 +44,10 @@ public class Radio {
             return;
         }
         this.currentVolume = currentVolume;
+    }
+
+    public int getRadioStationsCount() {
+        return radioStationsCount;
     }
 
     public void nextStation() {
