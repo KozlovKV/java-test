@@ -60,7 +60,7 @@ class FilmsManagerTest {
     @Test
     void checkVoidFindLastArray() {
         FilmsManager fm = new FilmsManager();
-        Film[] result = fm.findAll();
+        Film[] result = fm.findLast();
         int expected = 0;
         Assertions.assertEquals(expected, result.length);
     }
